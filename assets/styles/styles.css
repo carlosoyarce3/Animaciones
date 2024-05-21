@@ -73,20 +73,20 @@ ul.links{
 
 .logo img{
     margin-left: 3%;
-    width: 15%;
+    width: 5%;
 }
 
 main{
     grid-area: main;
+    
 }
 
 .news{
     background-color: #333;
     width: 100%;
-    height: 45vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -116,28 +116,27 @@ main{
     margin-top: 2%;
 }
 
-.news1txt{
-    display: none;
-}
-
-.news2txt{
-    display: none;
-}
-
-.news3txt{
-    display: none;
+.txt{
+    width: 90%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    gap: 3%;
+    margin-bottom: 4%;
+    color: #c9c8c8;
 }
 .news_gallery{
     display: flex;
     flex-direction: row;
     gap: 3%;
-    
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
 .mini{
     background-color: #fff;
     width: 30vw;
-    height: 8vh;
+    height: 20vh;
 }
 
 .news1{
@@ -172,17 +171,71 @@ main{
 .news3:hover{
     filter: grayscale(0%);
 }
-
-.news1:hover + .main_news{
-    background-image: url(../imgs/Bruno1.webp);
+section{
+    background-color: #b9b9b9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+section p{
+    align-self: center;
+    font-size: 2.5em;
+    margin: 2%;
+}
+
+.champs{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.champ{
+    width: 90%;
+    height: 80vh;
+    position: relative;
+}
+
+.ic{
+    margin-left: 20%;
+}
+
+.tag{
+    margin-left: 49%;
+}
+
+.talent{
+    height: 80%;
+    position: absolute;
+}
+
+.title{
+    height: 30%;
+    position: absolute;
+    transform: translateY(197%) translateX(5%);
+}
+
+
 footer{
+    height: 30vh;
     grid-area: footer;
     background-color: #939393;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+}
+
+.redes{
+    display: flex;
+    gap: 20%;
 }
 
 .page{
+    display:grid;
     height: 100vh;
     grid-template-areas: 
     "side"
@@ -190,5 +243,43 @@ footer{
     "main"
     "footer"
     ;
-    grid-template-rows: 10% auto auto 15%;
+    grid-template-rows: 6% auto auto 15%;
+    overflow-y: scroll;
+}
+
+@media (min-width:576px){
+    .page{
+        grid-template-areas:
+        "side main main"
+        "side main main"
+        "footer footer footer"
+        ;
+        grid-template-columns: 10% auto auto;
+    }
+    .drop{
+        display: none;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news{
+        height: 100vh;
+    }
+
+    .links2 a{
+        margin: 18%;
+        font-size: 2em;
+    }
+
+    .main{
+        overflow-y: scroll;
+    }
+
+
+
+    .logo img{
+        width: 100%;
+    }
 }
